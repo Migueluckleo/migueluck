@@ -1,0 +1,42 @@
+
+      <!--navbar-->
+      <nav id="navbar" class="flex flex-row items-center justify-start h-16 shadow-sm sticky border-b-2 border-gray-800 lg:px-24">
+        <button class="w-40 h-full flex flex-col items-center justify-center">
+          <a class="w-auto h-full" href="#">
+            <img src="src/assets/Logo.png" alt="logo Miguel Leo" class="w-auto h-full p-3">
+          </a>
+        </button>
+      
+        <!--menu hamburguesa-->
+        <button id="menu-button" class="absolute lg:hidden right-4">
+        <i class="text-4xl ri-menu-line cursor-pointer"></i>
+      </button> 
+
+
+      <!--Menú desplegable-->
+        <ul class="absolute top-0 hidden flex-col h-dvh w-dvw bg-gray-800 text-white  text-xl font-bold gap-4 py-25 px-4 lg:static lg:flex lg:flex-row lg:h-auto lg:py-0 lg:justify-end lg:gap-8 lg:bg-transparent lg:text-gray-800">
+         <button class="absolute left-4 top-4 w-15"> <img src="src/assets/LogoW.png" alt="Logo Miguel Leo Blanco" > </button>
+          <li class="py-4 border-b-2 border-gray-600 lg:border-0 lg:w-auto lg:cursor-pointer lg:hover:text-blue-600" >
+          <a class="text-lg flex flex-row justify-between px-4 lg:gap-4" href="#about-me">Sobre mí
+            <i class="ri-crosshair-2-line"></i>
+          </a>
+          </li>
+          <li class="py-4 border-b-2 border-gray-600 lg:border-0 lg:w-auto lg:cursor-pointer lg:hover:text-blue-600">
+            <a class="text-lg flex flex-row justify-between px-4 lg:gap-4" href="#projects">
+              Proyectos
+              <i class="ri-crosshair-2-line"></i>
+              </a>
+          </li >
+          <li class="py-4 border-b-2 border-gray-600 lg:border-0 lg:w-auto lg:cursor-pointer lg:hover:text-blue-600">
+            <a class="text-lg flex flex-row justify-between px-4 lg:gap-4"  href="#reviews">
+              Reseñas
+              <i class="ri-crosshair-2-line"></i>
+            </a>
+          </li>
+          <li>
+            <button class="absolute right-4 top-4 lg:hidden">
+              <i class="text-4xl ri-close-circle-fill"></i>
+            </button>
+          </li>
+        </ul>
+      </nav>
