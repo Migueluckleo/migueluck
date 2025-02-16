@@ -374,6 +374,8 @@
     --default-mono-font-variation-settings: var(
       --font-mono--font-variation-settings
     );
+    --animate-slide-in: slide-in 0.5s ease-in-out;
+    --animate-slide-out: slide-out 0.5s ease-in-out;
   }
 }
 @layer base {
@@ -563,6 +565,14 @@
   .w-dvw {
     width: 100dvw;
   }
+navbarjs
+  .animate-slide-in {
+    animation: var(--animate-slide-in);
+  }
+  .animate-slide-out {
+    animation: var(--animate-slide-out);
+  }
+ main
   .cursor-pointer {
     cursor: pointer;
   }
@@ -750,6 +760,25 @@
     animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
   }
 }
+ navbarjs
+@keyframes slide-in {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@keyframes slide-out {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+main
 @property --tw-border-style {
   syntax: "*";
   inherits: false;
