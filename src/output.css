@@ -565,17 +565,16 @@
   .w-dvw {
     width: 100dvw;
   }
+navbarjs
   .animate-slide-in {
     animation: var(--animate-slide-in);
   }
   .animate-slide-out {
     animation: var(--animate-slide-out);
   }
+ main
   .cursor-pointer {
     cursor: pointer;
-  }
-  .resize {
-    resize: both;
   }
   .flex-col {
     flex-direction: column;
@@ -761,6 +760,7 @@
     animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
   }
 }
+ navbarjs
 @keyframes slide-in {
   0% {
     transform: translateX(-100%);
@@ -777,6 +777,8 @@
     transform: translateX(-100%);
   }
 }
+
+main
 @property --tw-border-style {
   syntax: "*";
   inherits: false;
