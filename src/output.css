@@ -865,9 +865,7 @@
     outline-style: var(--tw-outline-style);
     outline-width: 1px;
   }
-  .\[o\:1\7 l��\] {
-    o: 1l��;
-  }
+ 
   .sm\:static {
     @media (width >= 40rem) {
       position: static;
