@@ -8,55 +8,37 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Miguel Leo</title>
   </head>
   <body>
     <header id="header" class="bg-white">
 
-      <!--navbar-->
-      <nav id="navbar" class="flex flex-row items-center justify-start h-16 shadow-sm sticky border-b-2 border-gray-800 lg:px-24">
-        <button class="w-40 h-full flex flex-col items-center justify-center">
-          <a class="w-auto h-full" href="#">
-            <img src="src/assets/Logo.png" alt="logo Miguel Leo" class="w-auto h-full p-3">
-          </a>
-        </button>
-      
-        <!--menu hamburguesa-->
-        <button id="menu-button" class="absolute lg:hidden right-4">
-        <i class="text-4xl ri-menu-line cursor-pointer"></i>
-      </button> 
+      <section id="hero-container" class="relative w-full max-w-[1440px] h-dvh  max-h-[1080px] text-gray-800 top-0 left-1/2 transform -translate-x-1/2">
+        <div class="flex flex-col sm:flex-row-reverse  w-full h-full mt-4 sm:p-10">
+          <img src="src/assets/hero1.png" alt="app diseñada por Mleo" class="w-full sm:w-1/2 h-auto sm:h-fit object-fill">
+          <div class="flex flex-col w-full sm:w-1/2">
+          <div class="flex flex-wrap items-center gap-2  px-4 py-4">
+                  <div class="w-fit h-auto px-4 py-1 rounded-full bg-pink-100 border-l-1 border-t-1 border-r-4 border-b-4 border-gray-800"><p class="text-[11px] lg:text-2xl">Lead UX/UI Designer</p>
+                  </div>
+                  <div class="w-fit h-auto px-4 py-1 rounded-full bg-pink-100 border-l-1 border-t-1 border-r-4 border-b-4 border-gray-800 "><p class="text-[11px] lg:text-2xl">Consultant</p>
+                  </div>
+                  <div class="w-fit h-auto px-4 py-1 rounded-full bg-pink-100 border-l-1 border-t-1 border-r-4 border-b-4 border-gray-800 "><p class="text-[11px] lg:text-2xl">Strategist</p>
+                  </div>
+              </div>
 
+              <div class="flex flex-col w-full h-auto gap-6  px-4 py-4">
+                 <h1 class="text-6xl font-black lg:text-8xl"> Miguel Leo </h1>
+                 <h2 class="text-3xl lg:text-4xl font-bold"><span id="typewriter" class="border-r-4 border-white pr-1"></span></h2>
+                 <button class="h-11 w-fit rounded-xl bg-gray-800 text-white px-4 text-[16px] hover:bg-gray-400 hover:text-gray-800 cursor-pointer">Conocer más</button>
+              </div>
+            </div>    
+        </div>
 
-      <!--Menú desplegable-->
-        <ul id="nav-menu" 
-        class="absolute top-0 hidden flex-col h-dvh w-dvw bg-gray-800 text-white  text-xl font-bold gap-4 py-25 px-4 lg:static lg:flex lg:flex-row lg:h-auto lg:py-0 lg:justify-end lg:gap-8 lg:bg-transparent lg:text-gray-800">
-         <button class="absolute left-4 top-4 w-15"> <img src="src/assets/LogoW.png" alt="Logo Miguel Leo Blanco" > </button>
-          <li class="py-4 border-b-2 border-gray-600 lg:border-0 lg:w-auto lg:cursor-pointer lg:hover:text-blue-600" >
-          <a class="text-lg flex flex-row justify-between px-4 lg:gap-4" href="#about-me">Sobre mí
-            <i class="ri-crosshair-2-line"></i>
-          </a>
-          </li>
-          <li class="py-4 border-b-2 border-gray-600 lg:border-0 lg:w-auto lg:cursor-pointer lg:hover:text-blue-600">
-            <a class="text-lg flex flex-row justify-between px-4 lg:gap-4" href="#projects">
-              Proyectos
-              <i class="ri-crosshair-2-line"></i>
-              </a>
-          </li >
-          <li class="py-4 border-b-2 border-gray-600 lg:border-0 lg:w-auto lg:cursor-pointer lg:hover:text-blue-600">
-            <a class="text-lg flex flex-row justify-between px-4 lg:gap-4"  href="#reviews">
-              Reseñas
-              <i class="ri-crosshair-2-line"></i>
-            </a>
-          </li>
-          <li>
-            <button class="absolute right-4 top-4 lg:hidden">
-              <i class="text-4xl ri-close-circle-fill"></i>
-            </button>
-          </li>
-        </ul>
-      </nav>
-    </header>
-
-
+      </section>
+    <script src="js/scripts.js"></script>
     <script src="js/navigation.js"></script>
     <!--<script src="js/scripts.js"></script>-->
   </body>
