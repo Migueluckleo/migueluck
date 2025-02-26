@@ -30,12 +30,50 @@ a {
     font-family: 'Space Grotesk', sans-serif;
 }
 
-#particle-network {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: -1;
-}
+/* Inicialmente oculta el elemento */
+.animate-fade-in {
+    opacity: 0;
+    transform: translateY(20px); /* Pequeño desplazamiento opcional */
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+  }
+  
+  /* Cuando el elemento es visible, aparece con fade-in */
+  .animate-fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  @media (max-width: 768px) {
+    #value-proposal {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+    }
+  
+    .proposal-card {
+      position: absolute;
+      width: 100%;
+      height: 100vh;
+      top: 0;
+      left: 0;
+      background: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      padding: 20px;
+      opacity: 0;
+      transform: translateY(100%);
+      transition: transform 0.8s ease-out, opacity 0.5s ease-out;
+    }
+  
+    .active-card {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
+  .progress-dot.active {
+    background-color: #4A5568; /* Color más oscuro cuando está activo */
+    transform: scale(1.3);
+  }
+  
