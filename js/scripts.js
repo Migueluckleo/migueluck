@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     /** ================================
-     * ✅ Fade In Animation
+     * ✅ Fade In Animation (Soporte Móvil)
      * ================================ */
     const animatedElements = document.querySelectorAll(".animate-fade-in");
 
@@ -8,15 +8,15 @@ document.addEventListener("DOMContentLoaded", function () {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add("visible");
-                fadeObserver.unobserve(entry.target); // Solo se anima una vez
+                fadeObserver.unobserve(entry.target); // Evita bucles
             }
         });
-    }, { threshold: 0.3 });
+    }, { threshold: 0.2, rootMargin: "0px 0px -50px 0px" }); // Mejor visibilidad en móviles
 
     animatedElements.forEach(element => fadeObserver.observe(element));
 
     /** ================================
-     * ✅ Counter Animation
+     * ✅ Counter Animation (Se repite al ser visible)
      * ================================ */
     const counters = document.querySelectorAll(".counter");
     const counterSection = document.getElementById("counter-section");
@@ -54,7 +54,11 @@ document.addEventListener("DOMContentLoaded", function () {
     /** ================================
      * ✅ Mobile Cards Navigation + Stepper (Solo en Mobile)
      * ================================ */
-    if (window.innerWidth <= 768) { // 🔥 Solo se ejecuta en dispositivos ≤ 768px
+    function isMobile() {
+        return window.innerWidth <= 768;
+    }
+
+    if (isMobile()) {
         const cards = document.querySelectorAll(".proposal-card");
         const progressDots = document.querySelectorAll(".progress-dot");
         const container = document.getElementById("value-proposal");
@@ -84,11 +88,13 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         function lockScroll() {
-            document.body.style.overflowY = "hidden";
+            document.documentElement.style.overflow = "hidden";
+            document.body.style.overscrollBehavior = "contain";
         }
 
         function unlockScroll() {
-            document.body.style.overflowY = "auto";
+            document.documentElement.style.overflow = "auto";
+            document.body.style.overscrollBehavior = "auto";
         }
 
         function resetScrollBehavior() {
@@ -97,9 +103,8 @@ document.addEventListener("DOMContentLoaded", function () {
             cards.forEach(card => card.classList.remove("active-card"));
         }
 
-        // 🔥 Solo activa el auto-scroll en móviles
         window.addEventListener("scroll", () => {
-            if (window.innerWidth > 768) return; // ✅ Bloqueo en desktop
+            if (!isMobile()) return; // Bloquea en desktop
             if (isElementVisible(container) && !isLocked) {
                 isLocked = true;
                 scrollToElement(container);
@@ -113,12 +118,15 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
 
-        window.addEventListener("wheel", (event) => {
+        function handleScroll(event) {
             if (!isLocked || isScrolling) return;
             isScrolling = true;
             setTimeout(() => { isScrolling = false; }, 700);
 
-            if (event.deltaY > 0) {
+            let direction = event.deltaY || event.touches?.[0]?.clientY;
+
+            if (direction > 0) {
+                // Scroll hacia abajo
                 if (currentCard < cards.length - 1) {
                     cards[currentCard].classList.remove("active-card");
                     currentCard++;
@@ -128,7 +136,8 @@ document.addEventListener("DOMContentLoaded", function () {
                     unlockScroll();
                     isLocked = false;
                 }
-            } else if (event.deltaY < 0) {
+            } else {
+                // Scroll hacia arriba
                 if (currentCard > 0) {
                     cards[currentCard].classList.remove("active-card");
                     currentCard--;
@@ -140,7 +149,10 @@ document.addEventListener("DOMContentLoaded", function () {
                     setTimeout(() => scrollToElement(counterSection), 100);
                 }
             }
-        });
+        }
+
+        window.addEventListener("wheel", handleScroll);
+        window.addEventListener("touchmove", handleScroll, { passive: true });
 
         updateProgressBar();
     }
