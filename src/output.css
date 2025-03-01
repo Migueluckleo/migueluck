@@ -541,9 +541,6 @@
   .right-4 {
     right: calc(var(--spacing) * 4);
   }
-  .bottom-4 {
-    bottom: calc(var(--spacing) * 4);
-  }
   .left-1\/2 {
     left: calc(1/2 * 100%);
   }
@@ -552,24 +549,6 @@
   }
   .z-20 {
     z-index: 20;
-  }
-  .container {
-    width: 100%;
-    @media (width >= 40rem) {
-      max-width: 40rem;
-    }
-    @media (width >= 48rem) {
-      max-width: 48rem;
-    }
-    @media (width >= 64rem) {
-      max-width: 64rem;
-    }
-    @media (width >= 80rem) {
-      max-width: 80rem;
-    }
-    @media (width >= 96rem) {
-      max-width: 96rem;
-    }
   }
   .mt-4 {
     margin-top: calc(var(--spacing) * 4);
@@ -582,9 +561,6 @@
   }
   .hidden {
     display: none;
-  }
-  .h-3 {
-    height: calc(var(--spacing) * 3);
   }
   .h-11 {
     height: calc(var(--spacing) * 11);
@@ -610,14 +586,8 @@
   .min-h-40 {
     min-height: calc(var(--spacing) * 40);
   }
-  .w-3 {
-    width: calc(var(--spacing) * 3);
-  }
   .w-15 {
     width: calc(var(--spacing) * 15);
-  }
-  .w-20 {
-    width: calc(var(--spacing) * 20);
   }
   .w-40 {
     width: calc(var(--spacing) * 40);
@@ -796,12 +766,6 @@
   .bg-\[\#fff2bc\] {
     background-color: #fff2bc;
   }
-  .bg-\[rgb\(243\,188\,255\)\] {
-    background-color: rgb(243,188,255);
-  }
-  .bg-gray-400 {
-    background-color: var(--color-gray-400);
-  }
   .bg-gray-800 {
     background-color: var(--color-gray-800);
   }
@@ -825,9 +789,6 @@
   }
   .p-6 {
     padding: calc(var(--spacing) * 6);
-  }
-  .p-8 {
-    padding: calc(var(--spacing) * 8);
   }
   .px-3 {
     padding-inline: calc(var(--spacing) * 3);
@@ -929,15 +890,6 @@
     --tw-shadow: 0 20px 25px -5px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 8px 10px -6px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
-  .transition-all {
-    transition-property: all;
-    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
-    transition-duration: var(--tw-duration, var(--default-transition-duration));
-  }
-  .duration-300 {
-    --tw-duration: 300ms;
-    transition-duration: 300ms;
-  }
   .hover\:bg-gray-400 {
     &:hover {
       @media (hover: hover) {
@@ -980,11 +932,6 @@
   .md\:flex {
     @media (width >= 48rem) {
       display: flex;
-    }
-  }
-  .md\:hidden {
-    @media (width >= 48rem) {
-      display: none;
     }
   }
   .md\:w-1\/4 {
@@ -1134,6 +1081,11 @@
       background-color: transparent;
     }
   }
+  .lg\:p-0 {
+    @media (width >= 64rem) {
+      padding: calc(var(--spacing) * 0);
+    }
+  }
   .lg\:px-24 {
     @media (width >= 64rem) {
       padding-inline: calc(var(--spacing) * 24);
@@ -1212,28 +1164,6 @@ a {
     height: 100vh;
     overflow: hidden;
   }
-  .proposal-card {
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    padding: 20px;
-    opacity: 0;
-    transform: translateY(100%);
-    transition: transform 0.8s ease-out, opacity 0.5s ease-out;
-  }
-  .active-card {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-.progress-dot.active {
-  background-color: #4A5568;
-  transform: scale(1.3);
 }
 @keyframes spin {
   to {
@@ -1380,8 +1310,4 @@ a {
   syntax: "*";
   inherits: false;
   initial-value: 0 0 #0000;
-}
-@property --tw-duration {
-  syntax: "*";
-  inherits: false;
 }
