@@ -13,14 +13,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <title >Miguel Leo</title>
   </head>
-  <body>
-    <header id="header" class="bg-white">
+  <body class="bg-[#E9F0FF]">
+    <header id="header" class="">
 
       <section id="hero-container" class="relative w-full max-w-[1440px] h-auto  max-h-[1080px] text-gray-800 top-0 left-1/2 transform -translate-x-1/2 p-6 lg:p-0">
         <div class="flex flex-col sm:flex-row-reverse  w-full h-full mt-4 sm:p-10">
           <img src="src/assets/hero1.png" alt="app diseñada por Mleo" class="w-full sm:w-1/2 sm:h-fit object-fill sm:object-fill animate-fade-in">
           <div class="flex flex-col w-full sm:w-1/2">
-          <div class="flex flex-wrap items-center gap-2  px-4 py-4">
+          <div class="flex flex-wrap items-center gap-2 py-4">
                   <div class="w-fit h-auto px-4 py-1 rounded-full bg-pink-100 border-l-1 border-t-1 border-r-4 border-b-4 border-gray-800 animate-fade-in"><p class="text-[11px] lg:text-2xl">Lead UX/UI Designer</p>
                   </div>
                   <div class="w-fit h-auto px-4 py-1 rounded-full bg-pink-100 border-l-1 border-t-1 border-r-4 border-b-4 border-gray-800 animate-fade-in"><p class="text-[11px] lg:text-2xl">Consultant</p>
@@ -29,7 +29,7 @@
                   </div>
               </div>
 
-              <div class="flex flex-col w-full h-auto gap-6  px-6 py-4 animate-fade-in">
+              <div class="flex flex-col w-full h-auto gap-6 py-4 animate-fade-in">
                 
                 <h1 class="text-6xl font-black lg:text-8xl "> Miguel Leo </h1>
                  <h2 class="text-[16px] lg:text-xl font-light">
@@ -42,33 +42,37 @@
       </section>
 
       <!--Counter-Section-->
-      <section id="counter-section" class="flex justify-center w-full bg-gray-800 mt-10">
-        <div class="flex flex-col max-w-[1440px] md:flex-row  w-full text-white  h-dvh lg:h-auto items-center justify-center md:justify-between py-6 md:px-15 xl:px-60 gap-6">
-        <div class="flex flex-col items-center justify-center">
+      <section id="counter-section" class="relative flex justify-center max-w-[1440px] bg-[#FFBCBC] mt-10 lg:left-1/2 lg:transform lg:-translate-x-[50%] rounded-2xl border-2 border-r-8 border-b-8 py-8 mx-6 lg:mx-0">
+        <div class="relative flex flex-col md:flex-row w-full justify-between text-gray-800 h-auto lg:px-50 gap-6 lg:gap-0">
+        <div class="flex lg:hidden">
+          <h3 class="text-2xl font-bold p-6 text-center">Mi Experiencia en Números</h3>
+        </div>
+        
+          <div class="relative flex flex-col items-center justify-center">
           <p>Más de</p>
           <h2 class="text-4xl counter" data-target="6">0</h2> 
             <h2 class="text-xl">Años como UXer</h2>
         </div>
     
-        <div class="flex flex-col items-center justify-center">
+        <div class=" relative flex flex-col items-center justify-center">
             <p>Más de</p>
             <h2 class="text-4xl counter" data-target="4">0</h2>
             <h2 class="text-xl">Años liderando equipos</h2>
         </div>
     
-        <div class="flex flex-col items-center justify-center">
+        <div class="relative flex flex-col items-center justify-center">
           <p>Más de</p>
             <h2 class="text-4xl counter" data-target="30">0</h2>
-            <h2 class="text-xl">Clientes Satisfechos</h2>
+            <h2 class="text-xl">Clientes satisfechos</h2>
         </div>
       </div>
     </section>
 
 <!--value proposal-->
-<section  class="flex flex-row justify-center h-auto w-full bg-white mt-10" >
+<section  class="flex flex-row justify-center h-auto w-full  mt-10" >
 <div class="flex flex-col lg:flex-row max-w-[1440px] w-full items-center justify-center py-6 px-6 gap-6">
       
-  <div class="relative flex flex-col items-start w-full h-auto lg:w-1/3 lg:h-full  bg-[#FFF2BC] shadow-xl rounded-xl lg:border-2 lg:border-r-8 lg:border-b-8 p-6 gap-4" >
+  <div class="relative flex flex-col items-start w-full h-auto lg:w-1/3 lg:h-full  bg-[#FFF2BC] shadow-xl rounded-xl border-2 border-r-8 border-b-8 p-6 gap-4" >
         <i class="ri-focus-3-fill text-5xl text-gray-800"></i>
         <h3 class="text-2xl text text-gray-800 font-semibold">Diseño con propósito</h3>
         <p class="text-gray-600">Cada solución es personalizada para alinear el producto con las necesidades del usuario y los objetivos del negocio. Mi enfoque va más allá del diseño estético: implemento metodologías de UX Research y Design Thinking para crear experiencias significativas.</p>
@@ -87,7 +91,7 @@
         </div>
       </div>
 
-      <div class="flex flex-col w-full lg:w-1/3  h-auto lg:h-full   bg-[#BCF7FF] shadow-xl  rounded-xl lg:border-2 lg:border-r-8 lg:border-b-8  p-6 gap-4" >
+      <div class="flex flex-col w-full lg:w-1/3  h-auto lg:h-full   bg-[#BCF7FF] shadow-xl  rounded-xl border-2 border-r-8 border-b-8  p-6 gap-4" >
         <i class="ri-brain-2-fill text-5xl text-gray-800"></i>
         <h3 class="text-2xl text text-gray-800 font-semibold">Transformo ideas en interfaces funcionales</h3>
         <p class="text-gray-600">Desde wireframes hasta prototipos interactivos, doy vida a productos digitales listos para validación. Diseño con precisión para que el desarrollo sea ágil y eficiente.</p>
@@ -107,7 +111,7 @@
      
       </div>
 
-      <div class="flex flex-col w-full lg:w-1/3  h-auto lg:h-full  bg-[#BCFFC7] shadow-xl min-h-40 rounded-xl lg:border-2 lg:border-r-8 lg:border-b-8  p-6 gap-4" >
+      <div class="flex flex-col w-full lg:w-1/3  h-auto lg:h-full  bg-[#BCFFC7] shadow-xl min-h-40 rounded-xl border-2 border-r-8 border-b-8  p-6 gap-4" >
         <i class="ri-team-fill text-5xl text-gray-800"></i>
         <h3 class="text-2xl text text-gray-800 font-semibold">Potencia tu equipo con conocimiento estratégico</h3>
         <p class="text-gray-600">A través de workshops, consultorías y mentoring, ayudo a equipos y startups a fortalecer sus capacidades en UX/UI, optimizando su enfoque y su ejecución de proyectos.</p>
@@ -140,13 +144,13 @@
   </div>
   <div class="flex flex-col lg:flex-row max-w-[1440px] p-6 gap-6">
    
-    <div id="service-card" class="w-full bg-[#BCFFC7] lg:w-1/3 rounded-2xl border-2 border-r-8 border-b-8  ">   
-      <img class="rounded-t-xl" src="src/assets/desktop.png" alt="">
+    <div id="service-card" class="flex flex-col w-full bg-[#BCFFC7] lg:w-1/3 rounded-2xl border-2 border-r-8 border-b-8  ">   
+      <img class="flex rounded-t-xl h-[260.47px] object-contain" src="src/assets/desktop.png" alt="">
       <div class="flex flex-col gap-6 p-6">
         <div class="flex flex-col gap-1">
           <h3 class="text-3xl font-semibold ">Sitios web</h3>
-          <p class="text-[14px]">Creamos sitios web sin depender de WordPress, 
-            Wix o website builders, brindando total control, flexibilidad y escalabilidad a tu página.</p>
+          <p class="text-[14px]">Creo sitios web sin depender de WordPress, Wix o website builders, brindando total control, flexibilidad y escalabilidad a tu página.
+          </p>
           </div>
         <div class="flex flex-row justify-between items-center">
           <h4 class="text-[16px] font-semibold">Precio desde</h4>
@@ -159,11 +163,11 @@
     </div>
 
     <div id="service-card" class="w-full bg-[#FFF2BC] lg:w-1/3 rounded-2xl border-2 border-r-8 border-b-8  ">   
-      <img class="rounded-t-xl" src="src/assets/desktop.png" alt="">
+      <img class="rounded-t-xl w-full h-[260.47px] object-contain" src="src/assets/leanProto.png" alt="">
       <div class="flex flex-col gap-6 p-6">
         <div class="flex flex-col gap-1">
           <h3 class="text-3xl font-semibold ">Prototipos Lean</h3>
-          <p class="text-[14px]">Transformamos tu idea de negocio en un prototipo de alta fidelidad (HF), ideal para validar su viabilidad y experiencia de usuario antes del desarrollo final.</p>
+          <p class="text-[14px]">Transformo tu idea de negocio en un prototipo de alta fidelidad (HF), ideal para validar su viabilidad y experiencia de usuario antes del desarrollo final.</p>
         </div>
         <div class="flex flex-row justify-between items-center">
           <h4 class="text-[16px] font-semibold">Precio desde</h4>
@@ -176,11 +180,12 @@
     </div>
 
     <div id="service-card" class="w-full bg-[#FFDBBC] lg:w-1/3 rounded-2xl border-2 border-r-8 border-b-8  ">   
-      <img class="rounded-t-xl" src="src/assets/desktop.png" alt="">
+      <img class="rounded-t-xl w-full h-[260.47px] object-contain" src="src/assets/DTPrototype.png" alt="">
       <div class="flex flex-col gap-6 p-6">
         <div class="flex flex-col gap-1"> 
           <h3 class="text-3xl font-semibold ">Prototipado DT </h3>
-          <p class="text-[14px]">Diseñamos un prototipo de alta fidelidad basado en investigación de usuarios para garantizar un producto alcanzable y funcional.</p>
+          <p class="text-[14px]">Diseño un prototipo de alta fidelidad basado en investigación de usuarios para garantizar un producto alcanzable y funcional.
+          </p>
         </div>
         <div class="flex flex-row justify-between items-center">
           <h4 class="text-[16px] font-semibold">Precio desde</h4>
