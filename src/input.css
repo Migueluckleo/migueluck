@@ -46,7 +46,7 @@ a {
   @media (max-width: 768px) {
     #value-proposal {
       
-      height: 100vh;
+      
       overflow: hidden;
     }
   }
