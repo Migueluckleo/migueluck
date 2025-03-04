@@ -73,3 +73,14 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         .catch(error => console.error("Error cargando la navbar:", error));
 });
+
+
+//footer
+
+fetch("src/components/footer.html")
+    .then(response => {
+        return response.text();
+    })
+    .then(html => {
+        document.querySelector(".footer-container").innerHTML = html;
+    })
