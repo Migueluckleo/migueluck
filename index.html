@@ -13,10 +13,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <title >Miguel Leo</title>
   </head>
-  <!-- Loader global -->
-<div id="loader" class="fixed inset-0 flex items-center justify-center bg-white z-50">
-  <div class="w-16 h-16 border-4 border-blue-500 border-dashed rounded-full animate-spin"></div>
-</div>
+
 
   <body class="bg-[#E9F0FF]">
     <header id="header" class="">
@@ -205,8 +202,19 @@
   </div>
 </section>
 
-<section id="posts-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
-  <!-- Aquí se inyectan las cards -->
+<section id="blog-cards" class="relative w-full max-w-[1440px] left-1/2 transform -translate-x-[50%]">
+  <div class="flex flex-col w-full h-auto gap-2 p-6">
+    <h1 class="text-3xl font-semibold">Artículos Recientes</h1>
+    <p class="text-[16px]">Descubre mis últimas publicaciones sobre diseño, UX/UI y estrategia digital.</p>
+    
+  </div>
+  <!-- Loader global -->
+  <div id="loader" class="fixed inset-0 flex items-center justify-center bg-white z-50">
+    <div class="w-16 h-16 border-4 border-blue-500 border-dashed rounded-full animate-spin"></div>
+  </div>
+  <div id="posts-container" class="relative w-full max-w-[1440px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
+    <!-- Aquí se inyectan las cards -->
+  </div>
 </section>
 
 
