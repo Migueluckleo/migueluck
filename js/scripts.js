@@ -61,6 +61,7 @@ const API_URL = 'https://api.sheetbest.com/sheets/bd1db17a-99ef-4486-b8c5-dbf194
 const loader = document.getElementById('loader');
 
 function showLoader() {
+  loader.danger
   if (loader) loader.style.display = 'flex';
 }
 
@@ -151,7 +152,7 @@ if (postHero) {
 
     } else {
       console.error('Post no encontrado');
-      postHero.innerHTML = `<p class="text-2xl">Post no encontrado</p>`;
+      postHero.innerHTML = `<p class="text-2xl">Lo sentimos mucho, no encontramos ese Post</p>`;
     }
   })();
 }
