@@ -94,7 +94,7 @@ if (postsContainer) {
 
     recentPosts.forEach(post => {
       postsContainer.innerHTML += `
-        <article class="bg-white rounded-xl shadow-md overflow-hidden">
+        <article class="bg-white rounded-xl shadow-md overflow-hidden border-black border-2 border-r-8 border-b-8">
           <a href="post.html?id=${post['ID']}">
             <img src="${post['Imagen Hero']}" alt="${post['Título']}" class="w-full h-48 object-cover">
             <div class="p-4">
@@ -129,8 +129,8 @@ if (postHero) {
       document.getElementById('post-date').textContent = post['Fecha'];
       postHero.style.backgroundImage = `url('${post['Imagen Hero']}')`;
 
-      document.getElementById('subtitle-one').textContent = post['Subtítulo 1'];
-      document.getElementById('post-paragraph-one').textContent = post['Párrafo 1'];
+      document.getElementById('subtitle-one').innerHTML = post['Subtítulo 1'];
+      document.getElementById('post-paragraph-one').innerHTML = post['Párrafo 1'];
 
       const interBanner = document.getElementById('inter-banner');
       if (post['Inter Banner']) {
@@ -143,7 +143,7 @@ if (postHero) {
       const paragraphTwo = document.getElementById('post-paragraph-two');
 
       if (post['Párrafo 2'] && post['Subtítulo 2']) {
-        paragraphTwo.textContent = post['Párrafo 2'];
+        paragraphTwo.innerHTML = post['Párrafo 2'];
         subtitleTwo.textContent = post['Subtítulo 2'];
       } else {
         paragraphTwo.style.display = 'none';
